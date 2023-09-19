@@ -1,0 +1,49 @@
+h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.nomovie{
+
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    text-align: center;
+}
+
+
+.bgtopo{
+    background-image: url(img/bgtopo.png);
+    background-color: aliceblue;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.menu{
+    height: 50px;
+    background-color: gray;
+    width: 1000px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 0 5px 0  gray;
+    border:none ;
+    border-radius: 10%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu:hover{
+    background-color: rgb(95, 95, 95);
+	color: white;
+    box-shadow: none;
+    position: relative;
+	top: 5px;
+
+}
+
+#menum{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
