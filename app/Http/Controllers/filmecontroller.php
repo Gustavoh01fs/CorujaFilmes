@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Filme;
+
 class filmecontroller extends Controller
 {
     public function index(){
+
         return view('welcome' , []);
     }
 
@@ -16,13 +19,9 @@ class filmecontroller extends Controller
 
     public function sessao(){
     
-        $filme = "Guardiões da Galaxia";
-        $filmes = ["Vingadores A Era de Ultron", "Vingadores Ultimato", "Capitão América", "Homem de Ferro", "Doutor Estranho", "Pantera Negra", "Homem Aranha"];
+        $filmes = Filme::all();
 
-        return view('sessao', [
-                'filme' => $filme,
-                'filmes' => $filmes
-                ]);
+        return view('sessao', ['filmes' => $filmes]);
     }
 
     public function reserva(){

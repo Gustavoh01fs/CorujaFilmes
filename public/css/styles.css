@@ -11,6 +11,9 @@ h1{
 }
 
 
+
+/*  Menu  */
+
 .bgtopo{
     background-image: url(img/bgtopo.png);
     background-color: aliceblue;
@@ -18,6 +21,13 @@ h1{
     background-repeat: no-repeat;
     background-position: center;
 
+}
+
+#menum{
+    text-align: right;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-right: 5%;
 }
 
 .menu{
@@ -42,8 +52,76 @@ h1{
 
 }
 
-#menum{
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 5%;
+/*  Geral  */
+
+body{
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.row {
+    margin: 0;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.btn-primary{
+    background-color: black;
+    border: 2px solid azure;
+}
+
+.btn-primary:hover{
+    background-color: gray;
+    border-color: gray;
+}
+
+/*  Pesquisa  */
+
+#search-container{
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 50px;
+
+}
+
+#search-container h1{
+    color: rgb(73, 68, 68);
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/*  Lista de Filmes  */
+
+#events-container {
+    padding: 50px;
+}
+
+#events-container h2{
+    margin-bottom: 10px;
+}
+
+#events-container .subtitle{
+    color: gray;
+    margin-bottom: 30px;
+}
+
+#cards-container{
+    display: flex;
+}
+
+#events-container card{
+    flex: 1 1 0;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
 }
