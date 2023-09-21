@@ -24,18 +24,20 @@
         <div id="menum">
         <a href="/" class="menu">Página Inicial</a>
         <a href="/sessao" class="menu">Sessões</a>
-        <a href="/reserva" class="menu">Minhas Reservas</a>
-        <a href="/filmes/create" class="menu">Cadastrar filme</a>
+        <a href="/reserva" class="menu">Categorias</a>
+        <a href="/vistos" class="menu">Vistos</a>
+        <a href="/filmes/create" class="menu">Cadastro</a>
         </div>
 
         @yield('content')
         
     <body>
 
+    <input type="button" value="Voltar" onClick="JavaScript: window.history.back();" class="bottao">
 
     </body>
     <footer>
-        <p align="center"> CorujaFilmes &copy; 2023</p>
+        <p> CorujaFilmes &copy; 2023</p>
     </footer>
 
     
