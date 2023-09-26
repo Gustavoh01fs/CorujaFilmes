@@ -10,19 +10,12 @@
         <input type="text" id="search" name="search" class="form-control" placeholder="Ex: Vingadores Ultimato">
     </form>
 </div>
-<div id="events-container" class="col-md-4">
-
     <div id="cards-container" class="row">
          @foreach($filmes as $filme)
-             <div class="card col-md-4 ">
-                    
-                 <img src="{{$filme -> capa}}" alt="{{ $filme -> nome }}" >
-                    
+             <div class="capa col-lg-2 col-md-lg-2 col-sm-6 ">    
+              <a href="#"><img src="{{$filme -> capa}}"></a>        
             </div>
          @endforeach
     </div>
-
 </div>
-
 @endsection
-

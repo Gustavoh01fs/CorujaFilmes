@@ -56,7 +56,7 @@ h1{
 
 body{
     min-height: 100vh;
-    padding-bottom: 100px;
+    padding-bottom: 10%;
     position: relative;
 }
 
@@ -90,7 +90,7 @@ body{
 
 #search-container h1{
     color: rgb(73, 68, 68);
-    margin-bottom: 30px;
+    margin-bottom: 3%;
     font-weight: 900;
 }
 
@@ -103,22 +103,18 @@ body{
 
 #cards-container{
     display: flex;
+
+}
+#cards-contaienr:hover{
+    height: 100%;
 }
 
 #events-container .card{
     flex: 1 1 0;
-    max-width: 140%;
+    max-width: 100%;
     border-radius: 10px;
     padding: 0;
     margin: 1%;
-}
-
-
-#events-container img{
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 footer {
@@ -135,3 +131,19 @@ footer {
     margin-bottom: 2%;
 }
 
+.capa{
+ margin-bottom: 1%;
+ padding: 0;
+ margin: 0;
+}
+.capa img{
+    border-radius: 10px;
+    margin-bottom: 2%;
+    padding: 0;
+    margin-left: 2%;
+    position: none;
+    
+}
+.capa img:hover{
+    scale: 1.01;
+}

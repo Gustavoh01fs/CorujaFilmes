@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nome');
-            $table->text('sinopse');
-            $table->string('genero');
+            $table->text('capa');
+            $table->string('url');
 
         });
     }

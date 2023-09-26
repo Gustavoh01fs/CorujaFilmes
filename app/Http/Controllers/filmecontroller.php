@@ -6,11 +6,15 @@ use Illuminate\Http\Request;
 
 use App\Models\Filme;
 
+use App\Models\Lancamento;
+
 class filmecontroller extends Controller
 {
     public function index(){
+        
+        $lancamento = Lancamento::all();
 
-        return view('welcome' , []);
+        return view('welcome' , ['lancamento' => $lancamento]);
     }
 
     public function cadmovie(){
@@ -27,4 +31,6 @@ class filmecontroller extends Controller
     public function reserva(){
         return view('reserva');
     }
+    
+    
 }

@@ -24,8 +24,6 @@
         <div id="menum">
         <a href="/" class="menu">Página Inicial</a>
         <a href="/sessao" class="menu">Sessões</a>
-        <a href="/reserva" class="menu">Categorias</a>
-        <a href="/vistos" class="menu">Vistos</a>
         <a href="/filmes/create" class="menu">Cadastro</a>
         </div>
 
