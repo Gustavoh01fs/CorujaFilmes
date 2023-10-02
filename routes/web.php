@@ -15,15 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\filmecontroller;
 
-
 Route::get('/', [filmecontroller::class, 'index']);
-Route::get('/filmes/create', [filmecontroller::class, 'cadmovie']);
+Route::get('/filme/create', [filmecontroller::class, 'cadmovie']);
 Route::get('/sessao', [filmecontroller::class, 'sessao']);
 Route::get('/reserva', [filmecontroller::class, 'reserva']);
-
-
-/*
-Route::get('/adm/{id}', function ($id = adm){
-    return view('adm', ['id' => $id]);
-});
-*/
+Route::post('/filme', [filmecontroller::class, 'store']);

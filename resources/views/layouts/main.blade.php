@@ -24,14 +24,23 @@
         <div id="menum">
         <a href="/" class="menu">Página Inicial</a>
         <a href="/sessao" class="menu">Sessões</a>
-        <a href="/filmes/create" class="menu">Cadastro</a>
+        <a href="/filme/create" class="menu">Cadastro</a>
         </div>
 
-        @yield('content')
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                @if(session('msg'))
+                <p class="msg">{{session ('msg')}}</p>
+                @endif
+                @yield('content')
+            </div>
+        </div>
+    </main>
         
     <body>
 
-    <input type="button" value="Voltar" onClick="JavaScript: window.history.back();" class="bottao">
+<!--<input type="button" value="Voltar" onClick="JavaScript: window.history.back();" class="bottao"> -->
 
     </body>
     <footer>

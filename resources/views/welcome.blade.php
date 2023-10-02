@@ -1,19 +1,32 @@
 @extends('layouts.main')
 
-@section('title', 'CorujaFilmes')
-
+@section('title', 'Sessões')
+@section('menu')
 @section('content')
 
+<div id="search-container" class="col-md-12">
+    <h1>Busque por um Filme</h1>
+    <form action="">
+        <input type="text" id="search" name="search" class="form-control" placeholder="Ex: Vingadores Ultimato">
+    </form>
+</div>
+    <div id="cards-container" class="row">
 
-<div id="events-container" class="col-md-12">
-    <h2>Próximos filmes</h2>
-        <p>Veja os filmes que serão lançados em breve</p>
-        <div id="cards-container" class="row">
-            @foreach($lancamento as $lanc)
-            <div class="capa col-lg-2 col-md-2 col-sm-6">
-               <a href=""><img src="{{$lanc -> capa}}"></a>
+@if($search)
+<h3>Resultados para: {{$search}}</h3>
+@else
+<h2>Veja os filmes disponiveis.</h2>
+@endif
+
+         @foreach($filmes as $filme)
+             <div class="capa col-lg-2 col-sm-6 col-md-4">    
+              <a href="{{$filme -> url}}"><img src="{{$filme -> capa}}"></a>        
             </div>
-            @endforeach
-        </div>
+         @endforeach
+@if(count($filmes) == 0)
+<p>Sem resultados para {{$search}}</p>
+<p>Clique <a href="/">aqui</a> para voltar para página principal! </p>
+@endif
+    </div>
 </div>
 @endsection

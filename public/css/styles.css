@@ -128,22 +128,54 @@ footer {
 }
 
 .bottao{
-    margin-bottom: 2%;
+    margin-bottom: 1%;
+    height: 50px;
+    background-color: gray;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 0 5px 0  gray;
+    border:none ;
+    border-radius: 10%;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 2%;
+}
+.bottao:hover{
+    background-color: rgb(95, 95, 95);
+	color: white;
+    box-shadow: none;
+    position: relative;
+	top: 5px;
+
 }
 
 .capa{
  margin-bottom: 1%;
  padding: 0;
  margin: 0;
+ margin-left: 0.6%;
 }
 .capa img{
     border-radius: 10px;
     margin-bottom: 2%;
     padding: 0;
-    margin-left: 2%;
+    margin-left: 4%;
     position: none;
+
+
     
 }
 .capa img:hover{
     scale: 1.01;
 }
+
+.form-group{
+    margin-bottom: 1%;
+}
+
+.msg{
+    width: 100%;
+    background-color: rgb(46, 255, 220);
+    text-align: center;
+    height: 2%;
+}   
