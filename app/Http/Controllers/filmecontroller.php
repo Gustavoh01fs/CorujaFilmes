@@ -19,7 +19,7 @@ class filmecontroller extends Controller
             ])->get();
 
         } else{
-            $filmes = Filme::all();
+            $filmes = Filme::whereIn('status', [0])->get();
         }
         
 
@@ -27,12 +27,16 @@ class filmecontroller extends Controller
     }
 
     public function cadmovie(){
+
         return view('filme.create');
     } 
 
     public function sessao(){
 
-        return view('sessao', []);
+        $breve = Filme::whereIn('status', [1])->get();
+
+
+        return view('sessao', ['breve' => $breve]);
     }
 
     public function reserva(){
@@ -54,8 +58,13 @@ class filmecontroller extends Controller
 
         $filmme -> save();
 
-        return redirect('/')->with('msg', 'Filme adicionado com sucesso!');
 
+        if($quest->ofilme == 1){
+        return redirect('/sessao')->with('msg', 'Filme adicionado com sucesso!');
+        }
+        else{
+        return redirect('/')->with('msg', 'Filme adicionado com sucesso!');
+        }
 
     }
 }
